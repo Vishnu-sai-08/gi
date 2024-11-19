@@ -19,18 +19,6 @@ from django.urls import path
 from app1 import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('eve1',views.ev1),
-    path('login/',views.log),
-    path('register/',views.reg),
-    path('',views.mia),
-    path('contact/',views.cont),
-    path('about-us/',views.abo),
-    path('doregister/',views.doreg),
-    path('logincheck/',views.logincheck),
-    path('userhome/',views.use),
-    path('adminhome/',views.adm),
-    path('Viewusers/',views.vus),
-    path('modify/',views.modi),
-
-
-]
+    path('',views.ev1),
+    path('success/', views.success, name='success'), 
+   ]

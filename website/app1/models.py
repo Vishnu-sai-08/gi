@@ -9,3 +9,14 @@ class register(models.Model):
 
     def __str__(self):
         return self.Email
+
+
+class JobApplication(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    phone = models.CharField(max_length=15)
+    cover_letter = models.TextField()
+    resume = models.FileField(upload_to='resumes/')
+
+    def __str__(self):
+        return self.name
